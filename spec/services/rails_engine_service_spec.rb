@@ -21,7 +21,7 @@ describe RailsEngineService do
         expect(items).to be_a Hash
         expect(items[:data]).to be_a Array
         expect(items[:data][0]).to be_a Hash
-        expect(items[:data][:id]).to eq(1575)
+        expect(items[:data][0][:id]).to eq("1575")
         expect(items[:data][0][:attributes]).to be_a Hash
         expect(items[:data][0][:attributes][:name]).to eq("Item Corrupti Dignissimos")
         expect(items[:data][0][:attributes][:description]).to eq("Sint non ipsum commodi mollitia veritatis. Autem et occaecati quo et quae reprehenderit eum. Harum aliquid aut a necessitatibus qui. Laudantium excepturi minima. Est nostrum sed laboriosam.")
