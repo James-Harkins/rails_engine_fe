@@ -19,4 +19,9 @@ class RailsEngineService
     response = conn.get("/api/v1/items")
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.get_one_item(item_id)
+    response = conn.get("/api/v1/items/#{item_id}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end

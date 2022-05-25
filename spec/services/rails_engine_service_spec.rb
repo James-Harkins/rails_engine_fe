@@ -51,9 +51,9 @@ describe RailsEngineService do
         expect(item).to be_a Hash
         expect(item[:data]).to be_a Hash
         expect(item[:data][:id]).to eq("4")
-        expect(items[:data][:attributes][:name]).to eq("Item Nemo Facere")
-        expect(items[:data][:attributes][:description]).to eq("Sunt eum id eius magni consequuntur delectus veritatis. Quisquam laborum illo ut ab. Ducimus in est id voluptas autem.")
-        expect(items[:data][:attributes][:unit_price]).to eq(42.91)
+        expect(item[:data][:attributes][:name]).to eq("Item Nemo Facere")
+        expect(item[:data][:attributes][:description]).to eq("Sunt eum id eius magni consequuntur delectus veritatis. Quisquam laborum illo ut ab. Ducimus in est id voluptas autem.")
+        expect(item[:data][:attributes][:unit_price]).to eq(42.91)
       end
     end
   end
