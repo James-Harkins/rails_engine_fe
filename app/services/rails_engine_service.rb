@@ -14,4 +14,9 @@ class RailsEngineService
     response = conn.get("/api/v1/merchants/#{merchant_id}/items")
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.get_all_items
+    response = conn.get("/api/v1/items")
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
