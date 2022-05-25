@@ -21,5 +21,15 @@ describe MerchantFacade do
         expect(items.length).to eq(39)
       end
     end
+
+    describe "#find_all_by_name" do
+      it "returns a collection of all merchants with names including the search param" do
+        ill_merchants = MerchantFacade.find_all_by_name("ill")
+
+        expect(ill_merchants).to be_an Array
+        expect(ill_merchants[0]).to be_a Merchant
+        expect(ill_merchants.length).to eq(5)
+      end
+    end
   end
 end

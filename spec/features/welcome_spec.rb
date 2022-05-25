@@ -7,6 +7,7 @@ describe "landing page" do
         visit "/"
 
         fill_in :search, with: "ill"
+        click_on "Search"
 
         expect(current_path).to eq("/")
         expect(page).to have_content("Schiller, Barrows and Parker")
