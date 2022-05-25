@@ -11,5 +11,15 @@ describe MerchantFacade do
         expect(merchants.length).to eq(100)
       end
     end
+
+    describe "#get_merchant_items" do
+      it "returns a collection of all of some merchants items as Item POROs" do
+        items = MerchantFacade.get_merchant_items(66)
+
+        expect(items).to be_a Array
+        expect(items[0]).to be_an Item
+        expect(items.length).to eq(42)
+      end
+    end
   end
 end
