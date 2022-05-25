@@ -4,5 +4,6 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = ItemFacade.get_one_item(params[:id])
   end
 end
