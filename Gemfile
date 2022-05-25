@@ -43,6 +43,7 @@ group :development, :test do
   gem "capybara"
   gem "pry"
   gem "standardrb"
+  gem "faraday"
 end
 
 group :development do
