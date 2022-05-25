@@ -10,4 +10,10 @@ class MerchantFacade
       Item.new(item_data)
     end
   end
+
+  def self.find_all_by_name(search)
+    RailsEngineService.find_merchants_by_name(search)[:data].map do |merchant_data|
+      Merchant.new(merchant_data)
+    end
+  end
 end
