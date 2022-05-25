@@ -24,4 +24,9 @@ class RailsEngineService
     response = conn.get("/api/v1/items/#{item_id}")
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.find_merchants_by_name(search)
+    response = conn.get("/api/v1/merchants/find_all?name=#{search}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
