@@ -18,7 +18,7 @@ describe MerchantFacade do
 
         expect(items).to be_a Array
         expect(items[0]).to be_an Item
-        expect(items.length).to eq(42)
+        expect(items.length).to eq(39)
       end
     end
   end
