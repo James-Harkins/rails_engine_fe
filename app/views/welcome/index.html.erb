@@ -8,3 +8,9 @@
 
   <%= form.submit "Search" %>
 <% end %>
+
+<% if @merchants %>
+  <% @merchants.each do |merchant| %>
+    <%= merchant.name %><br>
+  <% end %>
+<% end %>
