@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe Merchant do
-  it "exists with attributes" do
+  it "exists and has attributes" do
     attributes = {
       id: 9,
       attributes: {
