@@ -4,4 +4,9 @@ class ItemFacade
       Item.new(item_data)
     end
   end
+
+  def self.get_one_item(item_id)
+    attributes = RailsEngineService.get_one_item(item_id)[:data]
+    Item.new(attributes)
+  end
 end
