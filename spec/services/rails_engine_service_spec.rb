@@ -56,5 +56,17 @@ describe RailsEngineService do
         expect(item[:data][:attributes][:unit_price]).to eq(42.91)
       end
     end
+
+    describe "#find_merchants_by_name" do
+      it "returns a Hash containing the data for all merchants that meet the search criteria" do
+        ill_merchants = RailsEngineService.find_merchants_by_name("ill")
+
+        expect(ill_merchants).to be_a Hash
+        expect(ill_merchants[:data]).to be_a Array
+        expect(ill_merchants[:data][0]).to be_a Hash
+        expect(ill_merchants[:data][0][:attributes]).to be_a Hash
+        expect(ill_merchants[:data][0][:attributes][:name]).to eq("Schiller, Barrows and Parker")
+      end
+    end
   end
 end
