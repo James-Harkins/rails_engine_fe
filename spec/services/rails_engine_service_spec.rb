@@ -43,5 +43,18 @@ describe RailsEngineService do
         expect(items[:data][0][:attributes][:unit_price]).to eq(42.91)
       end
     end
+
+    describe "#get_one_item" do
+      it "returns a Hash containing the data for one item" do
+        item = RailsEngineService.get_one_item(4)
+
+        expect(item).to be_a Hash
+        expect(item[:data]).to be_a Hash
+        expect(item[:data][:id]).to eq("4")
+        expect(items[:data][:attributes][:name]).to eq("Item Nemo Facere")
+        expect(items[:data][:attributes][:description]).to eq("Sunt eum id eius magni consequuntur delectus veritatis. Quisquam laborum illo ut ab. Ducimus in est id voluptas autem.")
+        expect(items[:data][:attributes][:unit_price]).to eq(42.91)
+      end
+    end
   end
 end
