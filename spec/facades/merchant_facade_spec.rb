@@ -8,7 +8,7 @@ describe MerchantFacade do
 
         expect(merchants).to be_a Array
         expect(merchants[0]).to be_a Merchant
-        expect(merchants.length).to eq(99)
+        expect(merchants.length).to eq(100)
       end
     end
   end
